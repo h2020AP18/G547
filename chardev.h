@@ -1,0 +1,32 @@
+
+#ifndef CHARDEV_H
+#define CHARDEV_H
+
+#include <linux/ioctl.h>
+
+#define MAJOR_NUM 100
+
+#define IOCTL_GYROSCOPE_X_AXIS _IOWR(MAJOR_NUM, 0, char *)
+
+#define IOCTL_GYROSCOPE_Y_AXIS _IOWR(MAJOR_NUM, 1, char *)
+
+#define IOCTL_GYROSCOPE_Z_AXIS _IOWR(MAJOR_NUM, 2, char *)
+
+#define IOCTL_ACCELEROMETER_X_AXIS _IOWR(MAJOR_NUM, 3, char *)
+
+#define IOCTL_ACCELEROMETER_Y_AXIS _IOWR(MAJOR_NUM, 4, char *)
+
+#define IOCTL_ACCELEROMETER_Z_AXIS _IOWR(MAJOR_NUM, 5, char *)
+
+#define IOCTL_MAGNETOMETER_X_AXIS _IOWR(MAJOR_NUM, 6, char *)
+
+#define IOCTL_MAGNETOMETER_Y_AXIS _IOWR(MAJOR_NUM, 7, char *)
+
+#define IOCTL_MAGNETOMETER_Z_AXIS _IOWR(MAJOR_NUM, 8, char *)
+
+#define IOCTL_BAROMETER_PRESSURE _IOWR(MAJOR_NUM, 9, char *)
+
+#define DEVICE_FILE_NAME "/dev/imu_char"
+
+#endif
+
